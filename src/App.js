@@ -1,12 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
+import data from './data'
 
 
 function App() {
- 
-    
-
-  
+  const [people, setPeople] = useState(data);
   return (
+    <main>
+      <section>
+        <h3>{people.length}birthdays today</h3>
+        <List people={people} />
+        <button>clear all</button>
+      </section>
+    </main>
+
    
   )
 }
